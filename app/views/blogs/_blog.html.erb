@@ -1,0 +1,21 @@
+
+  <div class="row">
+    <div class="container">
+      <div class="post col s12 m12">
+        <div class="card blue darken-2">
+          <div class="card-content white-text" style="overflow-wrap : break-word; ">
+            <%= simple_format(blog.text) %>
+          </div>
+          <% if user_signed_in? && current_user.id == blog.user_id %>
+          <div class="waves-effect blue accent-1 btn">
+            <%= link_to 'EDIT', "/blogs/#{blog.id}/edit" , method: :get%>
+          </div>
+          <div class="waves-effect blue accent-1 btn">
+            <%= link_to 'DELETE', "/blogs/#{blog.id}", method: :delete %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  
