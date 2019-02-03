@@ -1,9 +1,9 @@
 <div class="contents row">
-  <%= form_tag("/blogs/#{@blog.id}", method: :patch) do %>
-    <h3>
-      編集する
-    </h3>
-    <textarea cols="30" name="text" placeholder="text" rows="10"><%= @blog.text %></textarea>
-    <input type="submit" value="SENT">
-  <% end %>
+  <div class="container">
+    <%= form_for @blog do |f|%>
+      <label for="first_name">編集</label>
+      <input id="hoge" value=<%= @blog.text %> type="text" name="text" placeholder="text" class="validate">
+      <input class="blue accent-1 btn" type="submit" value="SENT">
+    <% end %>
+  </div>
 </div>
