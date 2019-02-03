@@ -2,7 +2,7 @@
   <div class="container">
     <%= form_for @blog do |f|%>
       <label for="first_name">編集</label>
-      <input id="hoge" value=<%= @blog.text %> type="text" name="text" placeholder="text" class="validate">
+      <textarea class="materialize-textarea commentImput" type="text" name="text" placeholder="text" class="validate"><%= @blog.text %></textarea>
       <input class="blue accent-1 btn" type="submit" value="SENT">
     <% end %>
   </div>

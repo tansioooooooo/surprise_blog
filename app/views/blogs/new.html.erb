@@ -3,8 +3,8 @@
     <h1></h1>
     <div class='input_field'>
       <%= form_for @blog do |f| %>
-      <label for="first_name">新規投稿</label>
-        <input id="hoge" type="text" name="text" placeholder="ブログを書いてね" class="validate">
+      <label for="first_name col s12">新規投稿</label>
+        <textarea class="materialize-textarea commentInput" type="text" name="text" placeholder="ブログを書いてね" ></textarea>
         <input class="blue accent-1 btn" type="submit" value="SENT">
       <% end %>
     </div>
