@@ -28,11 +28,6 @@ class BlogsController < ApplicationController
     blog.update(blog_params) if blog.user_id == current_user.id
   end
 
-  def show
-    @blog = Blog.find(params[:id])
-    @comments = @blog.comments.includes(:user)
-  end
-
   private
   def blog_params
     params.permit(:text).merge(user_id: current_user.id)
